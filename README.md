@@ -178,7 +178,7 @@ print(m, n, p)          # 0 0 0
 - c) `int x = 5`
 - d) `PI = 3.14159`
 
-**Respuesta:** ______
+**Respuesta:** c)
 
 ### Ejercicio 1.5 — Opción múltiple
 
@@ -195,7 +195,7 @@ print(type(x))
 - c) Error: no se puede cambiar el tipo de una variable
 - d) `<class 'float'>`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 > **Nota:** En C, una vez que declaras `int x`, esa variable siempre será `int`. En Python las
 > variables pueden cambiar de tipo al reasignarles un valor. Esto se llama **tipado dinámico**.
@@ -209,7 +209,7 @@ print(type(x))
 - c) Error: `ValueError`
 - d) `"3"`
 
-**Respuesta:** ______
+**Respuesta:** c)
 
 > **Pista:** `int()` solo convierte cadenas que representan enteros. Para convertir `"3.14"` a
 > entero, primero se debe hacer `int(float("3.14"))`.
@@ -230,7 +230,7 @@ print(type(c))
 - c) `<class 'str'>`
 - d) Error: no se pueden sumar un `int` y un `float`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 1.8 — Opción múltiple
 
@@ -241,7 +241,7 @@ print(type(c))
 - c) `lambda`
 - d) `include`
 
-**Respuesta:** ______
+**Respuesta:** c)
 
 ### Ejercicio 1.9 — Opción múltiple
 
@@ -258,7 +258,7 @@ print(a, b)
 - c) `10 10`
 - d) Error
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ---
 
@@ -477,7 +477,7 @@ texto[0] = "h"
 - c) Se crea una nueva cadena `"hola"` automáticamente
 - d) No pasa nada, el cambio se ignora silenciosamente
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 2.8 — Opción múltiple
 
@@ -493,7 +493,7 @@ print(texto.split())
 - c) `['Hola', 'Mundo']`
 - d) `('Hola', 'Mundo')`
 
-**Respuesta:** ______
+**Respuesta:** c)
 
 ### Ejercicio 2.9 — Opción múltiple
 
@@ -509,7 +509,7 @@ print(s[-1], s[-2])
 - c) Error: los índices negativos no existen
 - d) `n h`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ---
 
@@ -643,7 +643,7 @@ print(7 / 2, 7 // 2, 7 % 2)
 - c) `3.5 3.0 1`
 - d) `3.5 3 1.0`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 3.5 — Opción múltiple
 
@@ -658,7 +658,7 @@ print(2 ** 10)
 - c) `100`
 - d) Error: el operador `**` no existe
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 3.6 — Opción múltiple
 
@@ -676,7 +676,7 @@ print(x)
 - c) `35`
 - d) `20`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 3.7 — Opción múltiple
 
@@ -687,7 +687,7 @@ print(x)
 - c) `++`
 - d) `%`
 
-**Respuesta:** ______
+**Respuesta:** c)
 
 ### Ejercicio 3.8 — Opción múltiple
 
@@ -703,7 +703,7 @@ print(10 is 10.0)
 - c) `False` y `False`
 - d) `False` y `True`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 > **Nota:** `==` compara valores; `is` compara si son el mismo objeto en memoria.
 > `10` (int) y `10.0` (float) tienen el mismo valor pero son objetos distintos.
@@ -722,7 +722,7 @@ print(5 < 10 > 3)
 - c) `True` y Error
 - d) Error y Error
 
-**Respuesta:** ______
+**Respuesta:** a)
 
 ---
 
@@ -950,7 +950,7 @@ print(lista[1:3])
 - c) `[2, 3, 4]`
 - d) `[1, 2]`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 4.8 — Opción múltiple
 
@@ -967,7 +967,7 @@ print(len(lista))
 - c) `5`
 - d) Error
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 > **Nota:** `append` agrega el argumento como **un solo elemento**. Si quieres agregar los
 > elementos individuales, usa `extend`: `lista.extend([40, 50])` → longitud sería 5.
@@ -988,7 +988,7 @@ print(a)
 - c) Error: `b` es una copia, no se puede modificar `a`
 - d) `[4, 1, 2, 3]`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 4.10 — Opción múltiple
 
@@ -1004,7 +1004,7 @@ print(result)
 - c) `[0, 2, 4, 6, 8]`
 - d) `[1, 2, 3, 4, 5]`
 
-**Respuesta:** ______
+**Respuesta:** c)
 
 ### Ejercicio 4.11 — Opción múltiple
 
@@ -1020,7 +1020,7 @@ print(lista[-2])
 - c) `5`
 - d) Error: índice negativo no válido
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 4.12 — Opción múltiple
 
@@ -1039,7 +1039,7 @@ print(nums)
 - c) `[1, 1, 3, 4, 5]` y `[1, 1, 3, 4, 5]`
 - d) Error: no se puede ordenar una lista con duplicados
 
-**Respuesta:** ______
+**Respuesta:** a)
 
 ---
 
@@ -1290,7 +1290,7 @@ for materia, alumnos in por_materia.items():
 - c) Las tuplas pueden contener más tipos de datos que las listas
 - d) Las listas son más rápidas que las tuplas
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 5.8 — Opción múltiple
 
@@ -1307,7 +1307,7 @@ print(d)
 - c) Error: no se pueden modificar los valores de un diccionario
 - d) `{"a": 1, "c": 3, "b": 20}`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 5.9 — Opción múltiple
 
@@ -1323,7 +1323,7 @@ print(d.get("z", 0))
 - c) Error: `KeyError`
 - d) `"z"`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 5.10 — Opción múltiple
 
@@ -1341,7 +1341,7 @@ print(tupla, lista)
 - c) Error: no se puede convertir una tupla a lista
 - d) `(1, 2, 3) [1, 2, 3]`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 5.11 — Opción múltiple
 
@@ -1352,7 +1352,7 @@ print(tupla, lista)
 - c) `8`
 - d) Error
 
-**Respuesta:** ______
+**Respuesta:** a)
 
 ### Ejercicio 5.12 — Opción múltiple
 
@@ -1363,7 +1363,7 @@ print(tupla, lista)
 - c) `(1, 2)`
 - d) `[1, 2]`
 
-**Respuesta:** ______
+**Respuesta:** d)
 
 > **Nota:** Las llaves de un diccionario deben ser **inmutables**. Las listas son mutables,
 > por lo que no pueden usarse como llaves. Enteros, cadenas y tuplas sí pueden.
@@ -1657,8 +1657,8 @@ print("Fuera de la función, x =", x)
 ```
 
 **Tu predicción:**
-- Dentro de la función, x = ______
-- Fuera de la función, x = ______
+- Dentro de la función, x = 50
+- Fuera de la función, x = 100
 
 > **Nota:** En Python, si quieres modificar una variable global dentro de una función,
 > necesitas usar la palabra `global`. Sin embargo, esto se considera **mala práctica**.
@@ -1681,7 +1681,7 @@ incrementar()
 print("Contador:", contador)
 ```
 
-**Tu predicción:** Contador = ______
+**Tu predicción:** Contador = 3
 
 > Aquí se usa `global` para modificar la variable del ámbito exterior. Recuerda que
 > esto es **mala práctica**. Sería mejor: `contador = incrementar(contador)`.
@@ -1705,9 +1705,9 @@ exterior()
 ```
 
 **Tu predicción:**
-- Interior: ______
-- Exterior: ______
-- Si descomentas `print(mensaje)`: ______
+- Interior: hola
+- Exterior: hola
+- Si descomentas `print(mensaje)`: ERROR
 
 ---
 
@@ -1952,7 +1952,7 @@ switch(opcion) {
 
 - d) Tanto b) como c) son válidas (c a partir de Python 3.10)
 
-**Respuesta:** ______
+**Respuesta:** d)
 
 ### Ejercicio 7.8 — Opción múltiple
 
@@ -1971,7 +1971,7 @@ else:
 - c) Error: `x` no es un booleano
 - d) No imprime nada
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 > Recuerda: `0`, `""`, `[]`, `None` y `False` son "falsy" (se evalúan como `False`).
 
@@ -1990,7 +1990,7 @@ print(resultado)
 - c) Error: la sintaxis es inválida
 - d) `15`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ---
 
@@ -2325,7 +2325,7 @@ for i in range(2, 10, 3):
 - c) `2 4 6 8`
 - d) `3 6 9`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 > **Nota:** `range(inicio, fin, paso)` — similar a `for(int i = inicio; i < fin; i += paso)` en C.
 
@@ -2345,7 +2345,7 @@ for i in range(5):
 - c) `0 1 2 4`
 - d) `3`
 
-**Respuesta:** ______
+**Respuesta:** b)
 
 ### Ejercicio 8.12 — Opción múltiple
 
@@ -2363,7 +2363,7 @@ for i in range(5):
 - c) `0 1 2 4`
 - d) `3`
 
-**Respuesta:** ______
+**Respuesta:** c)
 
 ---
 
