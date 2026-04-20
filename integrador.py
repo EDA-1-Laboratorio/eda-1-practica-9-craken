@@ -48,7 +48,7 @@ def eliminar_producto(inventario):
         inventario.remove(producto)
         print(f"Se ha eliminado el producto {producto["nombre"]} del inventario ")
     else:
-        print(f"No se econtró el proucto {nombre}")
+        print(f"No se econtró el producto {nombre}")
         return None
     pass
 
