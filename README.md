@@ -114,6 +114,14 @@ print("La gravedad es:", GRAVEDAD)
 <class 'bool'>
 La gravedad es: 9.81
 ```
+**Salida:**
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+La gravedad es: 9.81
+Mi nombre es: Santiago Uribe Carlos Yael <class 'str'>
+Semestre actual: 2026-2 <class 'str'>
+
 
 > **Tu turno:** Agrega una variable `nombre` con tu nombre y una variable `semestre` con
 > tu semestre actual. Imprime ambas usando `print()`.
@@ -142,6 +150,14 @@ print(False + 10)     # 10
 print(int(True))      # 1
 print(int(False))     # 0
 ```
+**Salida:**
+7.0 <class 'float'>
+42 <class 'int'>
+3 <class 'int'>
+2
+10
+1
+0
 
 > En C harías `(float)entero` o `atoi(cadena)`. En Python se usan las funciones `int()`,
 > `float()`, `str()`, `bool()`.
@@ -168,6 +184,11 @@ print(m, n, p)          # 0 0 0
 
 > En C, intercambiar dos variables requiere: `int temp = x; x = y; y = temp;`.
 > En Python basta con `x, y = y, x`.
+**Salida:**
+10 20 30
+200 100
+0 0 0
+
 
 ### Ejercicio 1.4 — Opción múltiple
 
@@ -334,6 +355,14 @@ print(f"Programadora: {nombre} {apellido}")
 print("Línea 1\nLínea 2")
 print("Columna1\tColumna2")
 ```
+**Salida:**
+Ada Lovelace
+Nombre: Ada, Apellido: Lovelace
+Apellido: Lovelace, Nombre: Ada
+Programadora: Ada Lovelace
+Línea 1
+Línea 2
+Columna1	Columna2
 
 ### Ejercicio 2.2 — Replica el ejemplo
 
@@ -366,6 +395,15 @@ print(texto.count("a"))  # 5
 print(texto.find("cad"))  # 4 (índice donde empieza)
 print(texto.find("xyz"))  # -1 (no encontrado)
 ```
+**Salida:**
+Estructura de Datos y Algoritmos
+['manzana', 'naranja', 'plátano', 'uva']
+manzana - naranja - plátano - uva
+False
+True
+5
+4
+-1
 
 ### Ejercicio 2.3 — Replica el ejemplo
 
@@ -396,6 +434,17 @@ print("-" * 30)      # ------------------------------
 ```
 
 > En C, invertir una cadena requiere un ciclo. En Python basta con `texto[::-1]`.
+**Salida:**
+Python
+es
+genial
+Python
+genial
+genia
+Pto sgna
+laineg se nohtyP
+jajaja
+
 
 ### Ejercicio 2.4 — Completa el código
 
@@ -405,13 +454,13 @@ Completa las líneas marcadas con `???` para que el programa funcione correctame
 fruta = "manzana"
 
 # Imprimir la longitud de la cadena
-print("La fruta tiene", ???(fruta), "letras")
+print("La fruta tiene", len(fruta), "letras")
 
 # Imprimir en mayúsculas
-print(fruta.???())
+print(fruta.upper())
 
 # Imprimir los primeros 3 caracteres
-print(fruta[???])
+print(fruta[0:2])
 ```
 
 **Salida esperada:**
@@ -428,11 +477,11 @@ Completa el código para generar un acrónimo a partir de una frase:
 ```python
 frase = "Estructura de Datos y Algoritmos"
 
-palabras = frase.???(???)   # Dividir la frase en palabras
+palabras = frase.split()   # Dividir la frase en palabras
 acronimo = ""
 
 for palabra in palabras:
-    acronimo = acronimo + palabra[???].???()   # Primera letra en mayúscula
+    acronimo = acronimo + palabra[0].upper()   # Primera letra en mayúscula
 
 print(acronimo)
 ```
@@ -452,9 +501,9 @@ y al revés):
 
 ```python
 def es_palindromo(texto):
-    texto = texto.???()        # Convertir a minúsculas
+    texto = texto.lower()        # Convertir a minúsculas
     texto = texto.replace(" ", "")  # Quitar espacios
-    return texto == texto[???]      # Comparar con la cadena invertida
+    return texto == texto[::-1]      # Comparar con la cadena invertida
 
 # Pruebas
 print(es_palindromo("anilina"))      # True
@@ -563,6 +612,20 @@ print("15 > 4:", a > b)       # True
 print("15 == 4:", a == b)     # False
 print("15 != 4:", a != b)     # True
 ```
+**SALIDA:**
+Suma: 19
+Resta: 11
+Multiplicación: 60
+División real: 3.75
+División entera: 3
+Módulo: 3
+Potencia: 50625
+x and y: False
+x or y: True
+not x: False
+15 > 4: True
+15 == 4: False
+15 != 4: True
 
 ### Ejercicio 3.2 — Replica el ejemplo
 
@@ -599,6 +662,15 @@ print("x %= 10 →", x)       # 4
 
 > En C puedes usar `x++`. En Python debes escribir `x += 1`.
 
+**SALIDA:**
+Valor inicial: 10
+x += 5 → 15
+x -= 3 → 12
+x *= 2 → 24
+x //= 5 → 4
+x **= 3 → 64
+x %= 10 → 4
+
 ### Ejercicio 3.3 — Replica el ejemplo
 
 Escribe y ejecuta el siguiente código que muestra particularidades de los operadores
@@ -629,6 +701,16 @@ print(a is c)   # True  (mismo objeto en memoria)
 print("hola " * 3)         # hola hola hola
 print([0] * 5)             # [0, 0, 0, 0, 0]
 ```
+**SALIDA:**
+True
+True
+True
+False
+True
+False
+True
+hola hola hola 
+[0, 0, 0, 0, 0]
 
 ### Ejercicio 3.4 — Opción múltiple
 
@@ -794,6 +876,17 @@ print("Después de pop:", frutas)
 print("Longitud:", len(frutas))
 print("¿Está 'manzana'?:", "manzana" in frutas)
 ```
+**SALIDA:**
+Lista mixta: [1, 'dos', 3.0, True, [5, 6]]
+Tipo: <class 'list'>
+Original: ['manzana', 'naranja', 'plátano']
+Después de append: ['manzana', 'naranja', 'plátano', 'uva']
+Después de insert(1, 'fresa'): ['manzana', 'fresa', 'naranja', 'plátano', 'uva']
+Después de remove('naranja'): ['manzana', 'fresa', 'plátano', 'uva']
+pop() devolvió: uva
+Después de pop: ['manzana', 'fresa', 'plátano']
+Longitud: 3
+¿Está 'manzana'?: True
 
 ### Ejercicio 4.2 — Replica el ejemplo
 
@@ -827,6 +920,15 @@ print("d:", d)  # d: [99, 2, 3]
 > En C, asignar un arreglo a otro también copia la dirección (con punteros). El
 > comportamiento es similar, pero en Python la solución es más sencilla: `.copy()`.
 
+**SALIDA:**
+[2, 3, 4]
+[0, 1, 2]
+[7, 8, 9]
+[0, 2, 4, 6, 8]
+[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+a: [99, 2, 3]
+c: [1, 2, 3]
+d: [99, 2, 3]
 ### Ejercicio 4.3 — Replica el ejemplo
 
 Escribe y ejecuta el siguiente código sobre list comprehensions (una forma compacta
@@ -853,6 +955,11 @@ palabras = ["hola", "mundo", "python", "es", "genial"]
 longitudes = [len(p) for p in palabras]
 print("Longitudes:", longitudes)  # [4, 5, 6, 2, 6]
 ```
+**SALIDA:**
+Clásica: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+Comprehension: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+Pares: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+Longitudes: [4, 5, 6, 2, 6]
 
 ### Ejercicio 4.4 — Completa el código
 
@@ -862,20 +969,20 @@ Dada la siguiente lista, completa el código para obtener la salida indicada:
 calificaciones = [8.5, 9.0, 7.5, 10.0, 6.0, 8.0]
 
 # 1. Imprime la cantidad de calificaciones
-print("Total:", ???)
+print("Total:", len(calificaciones))
 
 # 2. Imprime la calificación más alta
-print("Máxima:", ???)
+print("Máxima:", max(calificaciones))
 
 # 3. Imprime la calificación más baja
-print("Mínima:", ???)
+print("Mínima:", min(calificaciones))
 
 # 4. Imprime el promedio
-print("Promedio:", ???)
+print("Promedio:", sum(calificaciones)/len(calificaciones))
 
 # 5. Imprime las calificaciones ordenadas de menor a mayor
 #    Pista: usa sorted()
-print("Ordenadas:", ???)
+print("Ordenadas:", sorted(calificaciones))
 ```
 
 **Salida esperada:**
@@ -898,13 +1005,13 @@ nombres = ["Ana", "Luis", "María", "Pedro"]
 edades = [20, 22, 19, 21]
 
 # Combinar usando zip()
-combinada = list(???(nombres, edades))
+combinada = list(zip(nombres, edades))
 print(combinada)
 # [('Ana', 20), ('Luis', 22), ('María', 19), ('Pedro', 21)]
 
 # Encontrar el nombre de la persona más joven
-edad_minima = ???(edades)
-indice_joven = edades.???(edad_minima)
+edad_minima = min(edades)
+indice_joven = edades.index(edad_minima)
 print(f"El más joven es {nombres[indice_joven]} con {edad_minima} años")
 ```
 
@@ -922,11 +1029,11 @@ Completa el código que usa list comprehension para filtrar y transformar datos:
 temperaturas_f = [32, 50, 68, 86, 104, 212]
 
 # Convertir todas a Celsius: C = (F - 32) * 5/9
-temperaturas_c = [??? for f in temperaturas_f]
+temperaturas_c = [(f-32)*5/9 for f in temperaturas_f]
 print("En Celsius:", temperaturas_c)
 
 # Filtrar solo las temperaturas menores a 50°C
-frias = [c for c in temperaturas_c if ???]
+frias = [c for c in temperaturas_c if c<50]
 print("Menores a 50°C:", frias)
 ```
 
@@ -1145,6 +1252,18 @@ print("Diccionario completo:", materia)
 print("Llaves:", list(materia.keys()))
 print("Valores:", list(materia.values()))
 ```
+**Salida:**
+Punto: (4, 7)
+Primer color: rojo
+Cantidad de colores: 3
+x=4, y=7
+
+===DICCIONARIOS===
+Materia:  Estructura de Datos
+Grupo:  4
+Diccionario completo:  {'nombre': 'Estructura de Datos', 'grupo': 4, 'salon': 'P-108', 'alumnos': 35, 'semestre': '2026-2'}
+Llaves:  ['nombre', 'grupo', 'salon', 'alumnos', 'semestre']
+Valores:  ['Estructura de Datos', 4, 'P-108', 35, '2026-2']
 
 ### Ejercicio 5.2 — Replica el ejemplo
 
@@ -1177,6 +1296,13 @@ valores = ["Ana", 19, "Computación"]
 diccionario = dict(zip(llaves, valores))
 print(diccionario)
 ```
+**Salida:**
+Juan
+None
+N/A
+{'nombre': 'Juan'}
+{'a': 1, 'b': 20, 'c': 30}
+{'nombre': 'Ana', 'edad': 19, 'carrera': 'Computación'}
 
 ### Ejercicio 5.3 — Replica el ejemplo
 
@@ -1206,6 +1332,10 @@ print(f"Coordenada x: {p[0]}")
 
 > En C esto sería exactamente un `struct Punto { int x; int y; };` pero con la ventaja
 > de que es inmutable.
+**Salida:**
+Punto: (3, 7)
+Alumno: Carlos, Computación, semestre 2
+Coordenada x: 3
 
 ### Ejercicio 5.4 — Completa el código
 
@@ -1218,9 +1348,9 @@ frecuencia = {}
 
 for letra in texto:
     if letra in frecuencia:
-        frecuencia[???] = frecuencia[???] + 1
+        frecuencia[letra] = frecuencia[letra] + 1
     else:
-        frecuencia[???] = 1
+        frecuencia[letra] = 1
 
 print(frecuencia)
 ```
@@ -1238,8 +1368,8 @@ Completa el código que invierte un diccionario (las llaves se vuelven valores y
 original = {"rojo": 1, "verde": 2, "azul": 3}
 
 invertido = {}
-for llave, valor in original.???():
-    invertido[???] = ???
+for llave, valor in original.items():
+    invertido[valor] = llave
 
 print(invertido)
 ```
@@ -1267,8 +1397,8 @@ inscripciones = [
 por_materia = {}
 for nombre, materia in inscripciones:
     if materia not in por_materia:
-        por_materia[???] = []
-    por_materia[???].???(nombre)
+        por_materia[materia] = []
+    por_materia[nombre].append(nombre)
 
 for materia, alumnos in por_materia.items():
     print(f"  {materia}: {alumnos}")
@@ -1443,6 +1573,11 @@ datos = [4, 8, 15, 16, 23, 42]
 mn, mx, prom = estadisticas(datos)
 print(f"Mín: {mn}, Máx: {mx}, Promedio: {prom}")
 ```
+**Salida:**
+Área: 15
+3^2 = 9
+2^10 = 1024
+Mín: 4, Máx: 42, Promedio: 18.0
 
 ### Ejercicio 6.2 — Replica el ejemplo
 
@@ -1470,6 +1605,13 @@ crear_perfil(nombre="Ana", edad=20, carrera="Computación")
 
 > En C, las funciones con argumentos variables (`...`) son complicadas (requieren `stdarg.h`).
 > En Python es directo con `*args` y `**kwargs`.
+**Salida:**
+6
+100
+Perfil:
+  nombre: Ana
+  edad: 20
+  carrera: Computación
 
 ### Ejercicio 6.3 — Replica el ejemplo
 
@@ -1501,6 +1643,13 @@ print("Cuadrados:", cuadrados)   # [1, 4, 9, 16, 25]
 pares = list(filter(lambda x: x % 2 == 0, numeros))
 print("Pares:", pares)           # [2, 4]
 ```
+**Salida:** 
+10
+  Ana: 9.2
+  Carlos: 8.5
+  Luis: 7.8
+Cuadrados: [1, 4, 9, 16, 25]
+Pares: [2, 4]
 
 ### Ejercicio 6.4 — Completa el código
 
@@ -1508,10 +1657,10 @@ Completa la función que convierte grados Celsius a Fahrenheit y viceversa:
 
 ```python
 def celsius_a_fahrenheit(celsius):
-    return ???
+    return (celsius*(9/5))+32
 
 def fahrenheit_a_celsius(fahrenheit):
-    return ???
+    return (fahrenheit-32)*(5/9)
 
 # Pruebas
 print(celsius_a_fahrenheit(0))     # 32.0
@@ -1532,10 +1681,10 @@ def separar_pares_impares(numeros):
     pares = []
     impares = []
     for n in numeros:
-        if ???:
-            pares.???(n)
+        if n%2==0:
+            pares.append(n)
         else:
-            impares.???(n)
+            impares.append(n)
     return pares, impares
 
 # Prueba
@@ -1552,13 +1701,13 @@ Completa la función que cuenta cuántas vocales y consonantes tiene una cadena:
 ```python
 def contar_vocales_consonantes(texto):
     vocales = "aeiouáéíóú"
-    texto = texto.???()  # Convertir a minúsculas
+    texto = texto.lower()  # Convertir a minúsculas
     num_vocales = 0
     num_consonantes = 0
     for c in texto:
         if c.isalpha():    # Solo letras (ignora espacios, números, etc.)
-            if c ??? vocales:
-                num_vocales ???= 1
+            if c in vocales:
+                num_vocales += 1
             else:
                 num_consonantes += 1
     return num_vocales, num_consonantes
@@ -1580,9 +1729,9 @@ el mayor valor en una llave dada:
 def encontrar_maximo(lista, llave):
     if not lista:
         return None
-    maximo = lista[???]
+    maximo = lista[0]
     for elemento in lista:
-        if elemento[???] > maximo[???]:
+        if elemento[llave] > maximo[llave]:
             maximo = elemento
     return maximo
 
@@ -1605,9 +1754,9 @@ Completa la función recursiva que calcula la potencia de un número:
 
 ```python
 def potencia_recursiva(base, exponente):
-    if exponente == ???:
-        return ???
-    return base * potencia_recursiva(???, ???)
+    if exponente == 0:
+        return 1
+    return base * potencia_recursiva(base, exponente-1)
 
 # Pruebas
 print(potencia_recursiva(2, 10))   # 1024
@@ -1622,12 +1771,12 @@ original:
 
 ```python
 def eliminar_duplicados(lista):
-    vistos = ???      # Pista: usa un conjunto (set)
+    vistos = set()      # Pista: usa un conjunto (set)
     resultado = []
     for elemento in lista:
-        if elemento ??? vistos:
+        if elemento not in vistos:
             resultado.append(elemento)
-            vistos.???(elemento)
+            vistos.add(elemento)
     return resultado
 
 # Pruebas
@@ -1762,6 +1911,10 @@ print(clasificar_triangulo(5, 5, 5))   # Equilátero
 print(clasificar_triangulo(5, 5, 3))   # Isósceles
 print(clasificar_triangulo(3, 4, 5))   # Escaleno
 ```
+**Salida:**
+Equilátero
+Isósceles
+Escaleno
 
 ### Ejercicio 7.2 — Replica el ejemplo
 
@@ -1791,6 +1944,11 @@ print(saludo)   # Buenas tardes
 ```
 
 > En C: `char *estado = (edad >= 18) ? "Mayor" : "Menor";`
+**Salida:**
+Mayor
+|-7| = 7
+Resultado: Aprobado
+Buenas tardes
 
 ### Ejercicio 7.3 — Replica el ejemplo
 
@@ -1831,6 +1989,17 @@ print(bool("hola")) # True
 print(bool([]))     # False
 print(bool([1]))    # True
 ```
+**Salida:**
+Temperatura agradable
+sábado es fin de semana
+Puede entrar
+El nombre está vacío
+False
+True
+False
+True
+False
+True
 
 ### Ejercicio 7.4 — Completa el código
 
@@ -1838,13 +2007,13 @@ Completa la función que clasifica una calificación numérica en letras.
 
 ```python
 def calificacion_letra(nota):
-    if ???:
+    if nota>=90:
         return "A"    # 90-100
-    elif ???:
+    elif nota>=80:
         return "B"    # 80-89
-    elif ???:
+    elif nota>=70:
         return "C"    # 70-79
-    elif ???:
+    elif >=60:
         return "D"    # 60-69
     else:
         return "F"    # menos de 60
@@ -1856,6 +2025,12 @@ print(calificacion_letra(75))   # C
 print(calificacion_letra(61))   # D
 print(calificacion_letra(45))   # F
 ```
+**Salida:**
+A
+B
+C
+D
+F
 
 ### Ejercicio 7.5 — Completa el código
 
@@ -1863,9 +2038,9 @@ Completa la función que determina si un año es bisiesto:
 
 ```python
 def es_bisiesto(anio):
-    if anio % ??? == 0:
-        if anio % ??? == 0:
-            if anio % ??? == 0:
+    if anio % 4 == 0:
+        if anio % 100 == 0:
+            if anio % 400 == 0:
                 return True
             else:
                 return False
@@ -1883,6 +2058,11 @@ print(es_bisiesto(2023))   # False (no divisible entre 4)
 
 > **Regla:** Un año es bisiesto si es divisible entre 4, EXCEPTO si es divisible entre 100,
 > A MENOS QUE también sea divisible entre 400.
+**Salida:**
+True
+False
+True
+False
 
 ### Ejercicio 7.6 — Completa el código
 
@@ -1890,12 +2070,12 @@ Completa la función que clasifica un carácter según su tipo:
 
 ```python
 def clasificar_caracter(c):
-    if c.???():        # ¿Es una letra?
-        if c.???():    # ¿Es mayúscula?
+    if c.isalpha():        # ¿Es una letra?
+        if c.isupper():    # ¿Es mayúscula?
             return "Letra mayúscula"
         else:
             return "Letra minúscula"
-    elif c.???():      # ¿Es un dígito?
+    elif c.isdigit():      # ¿Es un dígito?
         return "Dígito"
     elif c == " ":
         return "Espacio"
@@ -1911,6 +2091,12 @@ print(clasificar_caracter("@"))   # Carácter especial
 ```
 
 > **Pistas:** `isalpha()`, `isupper()`, `isdigit()` son métodos de cadenas.
+**Salida:**
+Letra mayúscula
+Letra minúscula
+Dígito
+Espacio
+Carácter especial
 
 ### Ejercicio 7.7 — Opción múltiple
 
@@ -2083,6 +2269,38 @@ notas = {"Cálculo": 8.5, "Programación": 9.0, "Física": 7.5}
 for materia, nota in notas.items():
     print(f"  {materia}: {nota}")
 ```
+**Salida:**
+=== Tabla del 7 (while) ===
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+7 x 4 = 28
+7 x 5 = 35
+7 x 6 = 42
+7 x 7 = 49
+7 x 8 = 56
+7 x 9 = 63
+7 x 10 = 70
+
+=== Números del 0 al 9 ===
+0 1 2 3 4 5 6 7 8 9
+
+=== Iterando una lista ===
+  - Cálculo
+  - Programación
+  - Física
+  - EDA
+
+=== Con índice ===
+  1. Cálculo
+  2. Programación
+  3. Física
+  4. EDA
+
+=== Iterando un diccionario ===
+  Cálculo: 8.5
+  Programación: 9.0
+  Física: 7.5
 
 ### Ejercicio 8.2 — Replica el ejemplo
 
@@ -2122,6 +2340,16 @@ else:
 
 > En C, `break` y `continue` funcionan igual. Pero la cláusula `else` en un `for` es exclusiva
 > de Python.
+**Salida:**
+=== break ===
+0 1 2 3 4 ¡Llegué a 5, me detengo!
+
+
+=== continue ===
+1 3 5 7 9 
+
+=== for-else ===
+Todos los números son pares
 
 ### Ejercicio 8.3 — Replica el ejemplo
 
@@ -2154,6 +2382,32 @@ for nombre, nota in zip(nombres, notas):
     estado = "Aprobado" if nota >= 8 else "Regular"
     print(f"  {nombre}: {nota} ({estado})")
 ```
+**Salida:**
+=== Tabla pitagórica (1-5) ===
+   1   2   3   4   5
+   2   4   6   8  10
+   3   6   9  12  15
+   4   8  12  16  20
+   5  10  15  20  25
+
+=== Triángulo ===
+*
+**
+***
+****
+*****
+
+=== Triángulo invertido ===
+*****
+****
+***
+**
+*
+
+=== zip ===
+  Ana: 9.0 (Aprobado)
+  Luis: 7.5 (Regular)
+  María: 8.8 (Aprobado)
 
 ### Ejercicio 8.4 — Completa el código
 
@@ -2162,9 +2416,9 @@ Completa el programa que calcula el factorial de un número usando un ciclo `whi
 ```python
 def factorial(n):
     resultado = 1
-    while ???:
+    while n>5:
         resultado = resultado * n
-        ???
+        n-=1
     return resultado
 
 # Pruebas
@@ -2172,6 +2426,10 @@ print("5! =", factorial(5))    # 120
 print("0! =", factorial(0))    # 1
 print("10! =", factorial(10))  # 3628800
 ```
+**Salida:**
+5! = 120
+0! = 1
+10! = 3628800
 
 ### Ejercicio 8.5 — Completa el código
 
@@ -2181,15 +2439,15 @@ Completa el programa que encuentra los números primos entre 2 y un límite dado
 def es_primo(n):
     if n < 2:
         return False
-    for i in range(2, ???):
-        if ???:
+    for i in range(2, int(n**0.5)+1):
+        if n%i==0:
             return False
     return True
 
 def listar_primos(limite):
     primos = []
     for num in range(2, limite + 1):
-        if ???:
+        if es_primo(num):
             primos.append(num)
     return primos
 
@@ -2199,6 +2457,8 @@ print(listar_primos(30))
 
 > **Pista:** Recuerda que para verificar si un número es primo, basta con probar divisores
 > hasta la raíz cuadrada del número. En Python puedes usar `int(n**0.5) + 1` como límite.
+**Salida:**
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 
 ### Ejercicio 8.6 — Completa el código
 
@@ -2207,10 +2467,10 @@ Completa el programa que genera la secuencia de Fibonacci hasta un límite:
 ```python
 def fibonacci(limite):
     secuencia = []
-    a, b = ???, ???
-    while a ???:
+    a, b = 0, 1
+    while a<=limite:
         secuencia.append(a)
-        a, b = ???, ???
+        a, b = b, a+b
     return secuencia
 
 # Pruebas
@@ -2223,6 +2483,8 @@ print(fibonacci(100))
 
 > **Pista:** La secuencia empieza con 0 y 1. Cada número es la suma de los dos anteriores.
 > La asignación múltiple `a, b = b, a + b` es la forma idiomática en Python.
+**Salida:**
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 ### Ejercicio 8.7 — Completa el código
 
@@ -2239,18 +2501,32 @@ def juego_adivinanza():
 
     while True:
         intento = int(input("Tu intento: "))
-        intentos ???= 1
+        intentos += 1
 
-        if intento ???:
+        if intento ==secreto:
             print("¡Correcto! Lo lograste en", intentos, "intentos")
-            ???     # terminar el ciclo
-        elif intento ??? secreto:
+            break     # terminar el ciclo
+        elif intento < secreto:
             print("Demasiado bajo")
         else:
             print("Demasiado alto")
 
 juego_adivinanza()
 ```
+**Salida:**
+Adivina el número entre 1 y 100
+Tu intento: 56
+Demasiado alto
+Tu intento: 32
+Demasiado alto
+Tu intento: 21
+Demasiado alto
+Tu intento: 10
+Demasiado bajo
+Tu intento: 12
+Demasiado alto
+Tu intento: 11
+¡Correcto! Lo lograste en 6 intentos
 
 ### Ejercicio 8.8 — Completa el código
 
@@ -2261,9 +2537,9 @@ suman un valor dado:
 def contar_sumas(objetivo):
     conteo = 0
     combinaciones = []
-    for dado1 in range(???, ???):
-        for dado2 in range(???, ???):
-            if dado1 + dado2 ???:
+    for dado1 in range(1, 7):
+        for dado2 in range(1, 7):
+            if dado1 + dado2 == objetivo:
                 conteo += 1
                 combinaciones.append((dado1, dado2))
     return conteo, combinaciones
@@ -2295,10 +2571,10 @@ def decimal_a_binario(n):
     if n == 0:
         return "0"
     binario = ""
-    while ???:
-        residuo = n ??? 2
-        binario = ???(residuo) + binario
-        n = n ??? 2
+    while n!=0:
+        residuo = n % 2
+        binario = str(residuo) + binario
+        n = n // 2
     return binario
 
 # Pruebas
@@ -2310,6 +2586,11 @@ print(decimal_a_binario(42))   # 101010
 
 > **Pista:** Divide entre 2 repetidamente, el residuo (`%`) forma los dígitos binarios de
 > derecha a izquierda. Usa `str()` para convertir el residuo a cadena.
+**Salida:**
+0
+1010
+11111111
+101010
 
 ### Ejercicio 8.10 — Opción múltiple
 
@@ -2418,6 +2699,13 @@ else:
 if resultado is not None:
     print(f"{num1} {operacion} {num2} = {resultado}")
 ```
+**Salida:**
+=== Calculadora básica ===
+Operaciones: +, -, *, /
+Primer número: 86
+Operación (+, -, *, /): -
+Segundo número: 56
+86.0 - 56.0 = 30.0
 
 ### Ejercicio 9.2 — Programa interactivo: Conversor de unidades
 
@@ -2451,6 +2739,17 @@ elif opcion == "6":
 else:
     print("Opción no válida.")
 ```
+**Salida:**
+=== Conversor de unidades ===
+1. Kilómetros a millas
+2. Millas a kilómetros
+3. Celsius a Fahrenheit
+4. Fahrenheit a Celsius
+5. Kilogramos a libras
+6. Libras a kilogramos
+Elige una opción (1-6): 5
+Ingresa el valor: 67
+67.0 kg = 147.7095 libras
 
 ### Ejercicio 9.3 — Programa interactivo: Encuesta
 
@@ -2495,6 +2794,37 @@ for lang, count in lenguajes.items():
 ```
 
 ---
+**Salida:**
+¿Cuántos miembros tiene el equipo? 3
+
+--- Miembro 1 ---
+Nombre: Donovan
+Edad: 18
+Lenguaje de programación favorito: C
+
+--- Miembro 2 ---
+Nombre: Paco
+Edad: 18
+Lenguaje de programación favorito: Python
+
+--- Miembro 3 ---
+Nombre: Carlos
+Edad: 18
+Lenguaje de programación favorito: Fortran
+
+=== RESUMEN DEL EQUIPO ===
+Nombre           Edad Lenguaje       
+-------------------------------------
+Donovan            18 C
+Paco               18 Python
+Carlos             18 Fortran
+
+Edad promedio: 18.0
+
+Lenguajes favoritos:
+  C: 1
+  Python: 1
+  Fortran: 1
 
 ## Parte 10: Bibliotecas
 
@@ -2553,6 +2883,20 @@ print("Elección aleatoria:", random.choice(colores))
 random.shuffle(colores)
 print("Lista mezclada:", colores)
 ```
+**Salida:**
+=== math ===
+Pi: 3.141592653589793
+e: 2.718281828459045
+sqrt(144): 12.0
+ceil(4.2): 5
+floor(4.8): 4
+log2(1024): 10.0
+
+=== random ===
+Entero aleatorio [1, 10]: 2
+Flotante aleatorio [0, 1): 0.5974779487750148
+Elección aleatoria: azul
+Lista mezclada: ['verde', 'amarillo', 'rojo', 'azul']
 
 ### Ejercicio 10.2 — Replica el ejemplo
 
@@ -2586,6 +2930,17 @@ print("Mañana:", manana.strftime("%d/%m/%Y"))
 proxima_semana = ahora + timedelta(weeks=1)
 print("Próxima semana:", proxima_semana.strftime("%d/%m/%Y"))
 ```
+**Salida:**
+Ahora: 2026-04-19 16:13:13.244747
+Año: 2026
+Mes: 4
+Día: 19
+Hora: 16
+Formato personalizado: 19/04/2026 16:13
+Días de vida: 7340
+Años aproximados: 20
+Mañana: 20/04/2026
+Próxima semana: 26/04/2026
 
 ### Ejercicio 10.3 — Replica el ejemplo
 
@@ -2616,6 +2971,14 @@ else:
 usuario = os.environ.get("USER", "desconocido")
 print(f"\nUsuario del sistema: {usuario}")
 ```
+**SALIDA:**
+Directorio actual: /home/pclinux/2026-2/Eda1/practica9
+Archivos en el directorio:
+  [FILE] codigo.py
+'bibliotecas.py' no existe
+
+
+Usuario del sistema: pclinux
 
 ### Ejercicio 10.4 — Completa el código
 
@@ -2628,13 +2991,21 @@ import random
 resultados = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
 
 for _ in range(1000):
-    dado = random.???(1, 6)
-    resultados[???] += 1
+    dado = random.randint(1, 6)
+    resultados[dado] += 1
 
 print("Resultados de 1000 lanzamientos:")
-for cara, conteo in resultados.???():
+for cara, conteo in resultados.items():
     print(f"  Cara {cara}: {conteo} veces")
 ```
+**Salida:**
+Resultados de 1000 lanzamientos:
+  Cara 1: 152 veces
+  Cara 2: 175 veces
+  Cara 3: 176 veces
+  Cara 4: 160 veces
+  Cara 5: 172 veces
+  Cara 6: 165 veces
 
 ### Ejercicio 10.5 — Completa el código
 
@@ -2648,16 +3019,22 @@ def generar_contrasena(longitud=12):
     # string.ascii_letters = 'abcdefg...XYZ'
     # string.digits = '0123456789'
     # string.punctuation = '!@#$%...'
-    caracteres = string.ascii_letters + string.??? + string.???
+    caracteres = string.ascii_letters + string.digits + string.punctuation
     contrasena = ""
-    for _ in range(???):
-        contrasena += random.???(caracteres)
+    for _ in range(longitud):
+        contrasena += random.choice(caracteres)
     return contrasena
 
 # Generar 5 contraseñas de diferentes longitudes
 for longitud in [8, 12, 16, 20, 24]:
     print(f"  Longitud {longitud}: {generar_contrasena(longitud)}")
 ```
+**Salida:**
+ Longitud 8: nV8W^oLv
+  Longitud 12: :Za3Eb[y["+L
+  Longitud 16: ).3G}[w5BL4@Sw{}
+  Longitud 20: =r7'7o8o<Fe(BatKXtN9
+  Longitud 24: 'uJ["oV0.@-"@gF.]'P9ZgPd
 
 ### Ejercicio 10.6 — Completa el código
 
@@ -2668,7 +3045,7 @@ plano y el área de un triángulo usando la fórmula de Herón:
 import math
 
 def distancia(x1, y1, x2, y2):
-    return math.???(  (x2-x1)**2 + (???)**2  )
+    return math.sqrt(  (x2-x1)**2 + (y2-y1)**2  )
 
 def area_triangulo(x1, y1, x2, y2, x3, y3):
     # Calcular los tres lados
@@ -2677,7 +3054,7 @@ def area_triangulo(x1, y1, x2, y2, x3, y3):
     c = distancia(x3, y3, x1, y1)
 
     # Fórmula de Herón: s = semiperímetro
-    s = (a + b + c) / ???
+    s = (a + b + c) / 2
     area = math.sqrt(s * (s-a) * (s-b) * (s-c))
     return area
 
@@ -2687,6 +3064,9 @@ print(f"Área del triángulo: {area_triangulo(0, 0, 4, 0, 0, 3):.2f}")  # 6.00
 ```
 
 ---
+**Salida:**
+Distancia (0,0)→(3,4): 5.0
+Área del triángulo: 6.00
 
 ## Parte 11: Ejercicios integradores
 
@@ -2805,7 +3185,117 @@ def menu():
 
 menu()
 ```
+**Código final:**
+```python
+def agregar_producto(inventario):
+    nombre = input("Nombre del producto: ")
+    precio = float(input("Precio: "))
+    cantidad = int(input("Cantidad: "))
+    # TODO: Crear el diccionario del producto y agregarlo a la lista
+    producto={"nombre": nombre, "precio": precio, "cantidad": cantidad}
+    inventario.append(producto)
+    print("Se ha agregado el producto al inventario")
+    pass
 
+def mostrar_inventario(inventario):
+    if not inventario:
+        print("Inventario vacío.")
+        return
+    print(f"{'Nombre':<20} {'Precio':>10} {'Cantidad':>10}")
+    print("-" * 42)
+    # TODO: Recorrer el inventario e imprimir cada producto
+    for producto in inventario:
+        print(f"{producto["nombre"]:<20}, {producto["precio"]:>10}, {producto["cantidad"]:>10}")
+    pass
+
+def buscar_producto(inventario, nombre):
+    # TODO: Buscar y retornar el producto cuyo nombre coincida
+    # Retornar None si no se encuentra
+    for producto in inventario:
+        if producto["nombre"]==nombre:
+            return producto
+    else:
+        return None
+    pass
+
+def actualizar_cantidad(inventario):
+    nombre = input("Nombre del producto: ")
+    producto = buscar_producto(inventario, nombre)
+    if producto:
+        nueva_cantidad = int(input("Nueva cantidad: "))
+        # TODO: Actualizar la cantidad del producto
+        producto["cantidad"]=nueva_cantidad
+        print("Se ha actualizado la cantidad del producto:", producto["nombre"])
+        pass
+
+def eliminar_producto(inventario):
+    nombre = input("Nombre del producto a eliminar: ")
+    # TODO: Buscar el producto y eliminarlo de la lista
+    # Pista: usa inventario.remove(producto)
+    producto=buscar_producto(inventario, nombre)
+    if producto:
+        inventario.remove(producto)
+        print(f"Se ha eliminado el producto {producto["nombre"]} del inventario ")
+    else:
+        print(f"No se econtró el proucto {nombre}")
+        return None
+    pass
+
+def resumen(inventario):
+    if not inventario:
+        print("Inventario vacío.")
+        return
+    # TODO: Calcular e imprimir:
+    # - Total de productos distintos
+    # - Valor total (sum de precio * cantidad)
+    # - Producto más caro y más barato
+    print("Total de productos distintos: ", len(inventario))
+    print("Valor total: ", sum(producto["precio"]*producto["cantidad"] for producto in inventario))
+    producto_caro= max(inventario, key=lambda x: x["precio"])
+    producto_barato=min(inventario, key=lambda x: x["precio"])
+    print("Producto más caro: ", producto_caro["nombre"])
+    print("Poducto más barato: ", producto_barato["nombre"])
+    pass
+
+def menu():
+    inventario = []
+    while True:
+        print("\n=== GESTOR DE INVENTARIO ===")
+        print("1. Agregar producto")
+        print("2. Mostrar inventario")
+        print("3. Buscar producto")
+        print("4. Actualizar cantidad")
+        print("5. Eliminar producto")
+        print("6. Resumen")
+        print("7. Salir")
+
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            agregar_producto(inventario)
+        elif opcion == "2":
+            mostrar_inventario(inventario)
+        elif opcion == "3":
+            nombre = input("Nombre a buscar: ")
+            producto = buscar_producto(inventario, nombre)
+            if producto:
+                print(producto)
+            else:
+                print("No encontrado.")
+        elif opcion == "4":
+            actualizar_cantidad(inventario)
+        elif opcion == "5":
+            eliminar_producto(inventario)
+        elif opcion == "6":
+            resumen(inventario)
+        elif opcion == "7":
+            print("¡Hasta luego!")
+            break
+        else:
+            print("Opción no válida.")
+
+menu()
+```
 ### Ejercicio integrador B: Agenda de contactos
 
 Crea un archivo `agenda.py`. Desarrolla una agenda telefónica que almacene contactos
@@ -2911,7 +3401,162 @@ def menu():
 
 menu()
 ```
+**Código final:**
+```python
+def agregar_contacto(agenda):
+    nombre = input("Nombre: ")
+    telefono = input("Teléfono: ")
+    email = input("Email: ")
+    # TODO: Crear diccionario y agregarlo a la agenda
+    agenda.append({"nombre":nombre, "telefono":telefono, "email":email})
 
+    pass
+
+def listar_contactos(agenda):
+    if not agenda:
+        print("Agenda vacía.")
+        return
+    # TODO: Ordenar por nombre e imprimir en formato tabular
+    # Pista: sorted(agenda, key=lambda c: c["nombre"])
+    sortagenda = sorted(agenda, key=lambda c: c["nombre"])
+    for val in sortagenda:
+        print("\n",val["nombre"], "\nTelefono: ",val["telefono"],"\nEmail: ",val["email"])
+
+    pass
+
+def buscar_contacto(agenda, termino):
+    # TODO: Retornar lista de contactos cuyo nombre contenga 'termino'
+    # Pista: usa 'termino.lower() in contacto["nombre"].lower()'
+    found = []
+    for contacto in agenda:
+        if contacto["nombre"].find(termino.lower()) != -1:
+            found.append(contacto)
+            #print("\n",contacto["nombre"], "\n",contacto["telefono"],"\n",contacto["email"])
+    return found
+    pass
+
+def editar_contacto(agenda):
+    nombre = input("Nombre del contacto a editar: ")
+    resultados = buscar_contacto(agenda, nombre)
+    if not resultados:
+        print("No se encontró el contacto.")
+        return
+    # TODO: Si hay múltiples resultados, mostrarlos y pedir selección
+    # TODO: Pedir nuevo teléfono y/o email (enter para no cambiar)
+    selectedCont = resultados[0]
+    instr = ""
+    if len(resultados)>1:
+        index = 1
+        print("Multiples opciones detectadas, seleccione la opcion deseada:")
+        for contacto in resultados:
+            print(index, ") ", contacto["nombre"])
+            index += 1
+        index = int(input("Opcion seleccionada: "))-1
+        if index < 0 or index > len(resultados)-1:
+            print("Opcion invalida, cancelando accion")
+            return
+        selectedCont = resultados[index]
+
+    instr = input("Seleccione nuevo telefono (ENTER para no cambiar):")
+    if (instr != ""):
+        selectedCont["telefono"] = instr
+    instr = input("Seleccione nuevo email (ENTER para no cambiar)")
+    if (instr != ""):
+        selectedCont["email"] = instr
+    pass
+
+def eliminar_contacto(agenda):
+    nombre = input("Nombre del contacto a eliminar: ")
+    # TODO: Buscar y eliminar
+    resultados = buscar_contacto(agenda, nombre)
+    if not resultados:
+        print("No se encontro el contacto")
+        return
+    selContacto = resultados[0]
+    if len(resultados)>1:
+        index = 1
+        print("Multiples opciones detectadas, seleccione la opcion deseada:")
+        for contacto in resultados:
+            print(index, ") ", contacto["nombre"])
+            index += 1
+        index = int(input("Opcion seleccionada: "))-1
+        if index < 0 or index > len(resultados)-1:
+            print("Opcion invalida, cancelando accion")
+            return
+        selContacto = resultados[index]
+
+    agenda.remove(selContacto)
+    pass
+
+def exportar_csv(agenda):
+    # TODO: Imprimir cada contacto como: nombre,telefono,email
+    print("nombre,telefono,email")
+    for contacto in agenda:
+        print(contacto["nombre"], ", ", contacto["telefono"],", ",contacto["email"])
+    pass
+
+def estadisticas(agenda):
+    # TODO: Total de contactos
+    # TODO: Contar dominios de email (parte después del @)
+    print("Total de contactos: ", len(agenda))
+    dominioCount = {}
+    for contacto in agenda:
+        lugarArroba = contacto["email"].find("@")
+        if lugarArroba != -1:
+            if contacto["email"][lugarArroba:] in dominioCount.keys():
+                dominioCount[contacto["email"][lugarArroba:]] += 1
+            else:
+                dominioCount[contacto["email"][lugarArroba:]] = 1
+
+    print("Dominios de email guardados:")
+    for dominio, num in dominioCount.items():
+        print(dominio, ": ", num)
+    pass
+
+def menu():
+    agenda = []
+    while True:
+        print("\n=== AGENDA DE CONTACTOS ===")
+        print("1. Agregar contacto")
+        print("2. Listar contactos")
+        print("3. Buscar contacto")
+        print("4. Editar contacto")
+        print("5. Eliminar contacto")
+        print("6. Exportar CSV")
+        print("7. Estadísticas")
+        print("8. Salir")
+
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            agregar_contacto(agenda)
+        elif opcion == "2":
+            listar_contactos(agenda)
+        elif opcion == "3":
+            termino = input("Buscar: ")
+            resultados = buscar_contacto(agenda, termino)
+            if resultados:
+                for c in resultados:
+                    print(f"  {c['nombre']} - {c['telefono']} - {c['email']}")
+            else:
+                print("Sin resultados.")
+        elif opcion == "4":
+            editar_contacto(agenda)
+        elif opcion == "5":
+            eliminar_contacto(agenda)
+        elif opcion == "6":
+            exportar_csv(agenda)
+        elif opcion == "7":
+            estadisticas(agenda)
+        elif opcion == "8":
+            print("¡Hasta luego!")
+            break
+        else:
+            print("Opción no válida.")
+
+menu()
+
+```
 ### Ejercicio integrador C: Análisis de texto
 
 Crea un archivo `analizador.py`. Desarrolla un programa que analice un texto introducido
@@ -2970,7 +3615,113 @@ print(f"\nTexto modificado (primeras 100 letras):\n{nuevo[:100]}...")
 ```
 
 ---
+**Código final:**
+```python
+def contar_palabras(texto):
+	texto=texto.lower()
+	texto=texto.replace(".","")
+	texto=texto.replace("!","")
+	texto=texto.replace("¡","")
+	texto=texto.replace("?","")
+	texto=texto.replace("¿","")
+	lista=texto.split()
+	return len(lista)
+    # TODO: Retornar el número total de palabras
 
+def contar_oraciones(texto):
+    oraciones= texto.count(".") + texto.count("!") + texto.count("?") 
+    return oraciones
+    # TODO: Contar oraciones (terminan en '.', '!' o '?')
+
+def palabra_mas_frecuente(texto):
+	frecuencia = {}
+	texto=texto.lower()
+	texto=texto.replace(".","")
+	texto=texto.replace("!","")
+	texto=texto.replace("¡","")
+	texto=texto.replace("?","")
+	texto=texto.replace("¿","")
+	lista=texto.split()
+	for palabra in lista:
+		if palabra not in frecuencia:
+			frecuencia[palabra] = 1
+		else:
+			frecuencia[palabra] +=1
+	frecuente=max(frecuencia, key=frecuencia.get)
+	return frecuente
+    # TODO: Retornar la palabra que más se repite (ignorar mayúsculas)
+    # Pista: usa un diccionario para contar frecuencias
+
+def palabras_unicas(texto):
+	unicas= set()
+	resultado=[]
+	texto=texto.lower()
+	texto=texto.replace(".","")
+	texto=texto.replace("!","")
+	texto=texto.replace("¡","")
+	texto=texto.replace("?","")
+	texto=texto.replace("¿","")
+	lista=texto.split()
+	for palabra in lista:
+		if palabra not in unicas:
+			resultado.append(palabra)
+			unicas.add(palabra)
+	return resultado
+    # TODO: Retornar un conjunto (set) de palabras únicas
+
+def longitud_promedio_palabras(texto):
+	texto=texto.lower()
+	texto=texto.replace(".","")
+	texto=texto.replace("!","")
+	texto=texto.replace("¡","")
+	texto=texto.replace("?","")
+	texto=texto.replace("¿","")
+	lista=texto.split()
+	suma=0
+	for palabra in lista:
+		suma += len(palabra)
+	promedio= suma / len(lista)
+	return promedio
+    # TODO: Retornar la longitud promedio de las palabras
+
+def buscar_palabra(texto, palabra):
+	palabra=palabra.lower()
+	texto=texto.lower()
+	texto=texto.replace(".","")
+	texto=texto.replace("!","")
+	texto=texto.replace("¡","")
+	texto=texto.replace("?","")
+	texto=texto.replace("¿","")
+	lista=texto.split()
+	total=lista.count(palabra)
+	return total
+    # TODO: Retornar cuántas veces aparece la palabra en el texto
+
+def reemplazar_palabra(texto, vieja, nueva):
+	texto=texto.replace(vieja, nueva)
+	return texto
+    # TODO: Retornar el texto con la palabra vieja reemplazada por la nueva
+
+# Texto de ejemplo para analizar
+texto_ejemplo = """
+Python es un lenguaje de programación muy popular. Python es fácil de aprender.
+Muchos programadores usan Python para ciencia de datos y para desarrollo web.
+Python tiene una gran comunidad. La comunidad de Python es muy activa y amigable.
+¿Te gusta programar? ¡Python es una excelente opción para empezar!
+""" 
+
+print("=== ANALIZADOR DE TEXTO ===")
+print(f"Total de palabras: {contar_palabras(texto_ejemplo)}")
+print(f"Total de oraciones: {contar_oraciones(texto_ejemplo)}")
+print(f"Palabra más frecuente: {palabra_mas_frecuente(texto_ejemplo)}")
+print(f"Palabras únicas: {len(palabras_unicas(texto_ejemplo))}")
+print(f"Longitud promedio: {longitud_promedio_palabras(texto_ejemplo):.1f}")
+print(f"Veces que aparece 'Python': {buscar_palabra(texto_ejemplo, 'Python')}")
+
+nuevo = reemplazar_palabra(texto_ejemplo, "Python", "Java")
+print(f"\nTexto modificado (primeras 100 letras):\n{nuevo[:100]}...")
+
+```
 ## Tabla resumen: C vs Python
 
 | Concepto               | C                                     | Python                                  |
